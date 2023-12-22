@@ -25,3 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+function updateBackgroundImage(temperature) {
+  var body = document.body;
+  var imageUrl;
+
+  if (temperature < 10) {
+    imageUrl = "url('cold.jpg')"; // Replace with the path to your cold temperature image
+  } else if (temperature >= 10 && temperature < 20) {
+    imageUrl = "url('moderate.jpg')"; // Replace with the path to your moderate temperature image
+  } else {
+    imageUrl = "url('warm.jpg')"; // Replace with the path to your warm temperature image
+  }
+
+  body.style.backgroundImage = imageUrl;
+}
